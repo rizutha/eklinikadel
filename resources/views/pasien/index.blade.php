@@ -1,9 +1,5 @@
 @extends('templates.default')
-
-@php
-    $title = "Pasien Pendaftaran";
-    $preTitle = "Data";
-@endphp
+@section('title', 'Pasien')
 
 @push('page-action')
     <a href="{{ route ('pasien.create') }}" class="btn btn-primary mb-3">Tambah Data</a>

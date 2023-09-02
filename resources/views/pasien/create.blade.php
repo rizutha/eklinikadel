@@ -1,9 +1,5 @@
 @extends('templates.default')
-
-@php
-    $title = "Data Pasien";
-    $preTitle = "Tambahkan";
-@endphp
+@section('title', 'Create Pasien')
 
 @section('content')
 <div class="row col-lg-12">  
@@ -11,8 +7,6 @@
         <div class="card-body">
             <form action="{{ route('pasien.create') }}" class="" method=post>
             @csrf
-
-            
                 <div class="mb-3">
                     <label class="form-label">Nama</label>
                     <input type="text" name="nama" class="form-control" name="example-text-input" placeholder="Masukan Nama">

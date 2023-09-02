@@ -11,6 +11,7 @@ class PasienController extends Controller
     {   
         $pasiens = Pasien::orderBy('id', 'desc')->get();
         return view('pasien.index', [
+            'title' => 'Pasien Pendaftaran',
             'pasiens' => $pasiens,
         ]);
     }
@@ -18,7 +19,10 @@ class PasienController extends Controller
 
     public function create()
     {   
-        return view('pasien.create');
+        return view('pasien.create', [
+            'title' => 'Data Pasien',
+            'preTitle' => 'TAMBAHKAN'
+        ]);
     }
 
     public function store(Request $request)
@@ -51,7 +55,11 @@ class PasienController extends Controller
     {
         $pasien = Pasien::find($id);
 
-        return view('pasien.edit', ['pasien' => $pasien,]);
+        return view('pasien.edit', [
+            'pasien' => $pasien,
+            'title' => 'Data Pasien',
+            'preTitle' => 'Edit > '. $pasien->no_rm,
+        ]);
     }
     
 
