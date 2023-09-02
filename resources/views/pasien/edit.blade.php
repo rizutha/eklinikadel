@@ -12,7 +12,10 @@
             <form action="{{ route('pasien.update', $pasien->id) }}" class="" method=post>
             @csrf
             @method('PUT')
-            
+                <div class="mb-3">
+                    <label class="form-label">No RM</label>
+                    <input type="text" name="no_rm" class="form-control" name="example-text-input" placeholder="" value="{{ $pasien->no_rm }}">
+                </div>
                 <div class="mb-3">
                     <label class="form-label">Nama</label>
                     <input type="text" name="nama" class="form-control" name="example-text-input" placeholder="Masukan Nama" value="{{ $pasien->nama }}">
