@@ -13,10 +13,11 @@
     <div class="col-lg-12 ">
         <div class="card">
             <div class="table-responsive">
-                <table class="table table-vcenter card-table">
+                <table class="table table-vcenter card-table ">
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>RM</th>
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>No Telepon</th>
@@ -26,7 +27,10 @@
                     <tbody>
                         @foreach ($pasiens as $pasien)
                         <tr>
-                            <td>{{ $pasien->id }}</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td class="text-secondary">
+                                {{ $pasien->no_rm }}
+                            </td>
                             <td class="text-secondary">
                                 {{ $pasien->nama }}
                             </td>
