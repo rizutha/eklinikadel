@@ -1,10 +1,5 @@
 @extends('templates.default')
-
-@php
-    $title = "Data Pasien";
-    $preTitle = "Edit";
-@endphp
-
+@section('title', 'Edit '.$pasien->nama)
 @section('content')
 <div class="row col-lg-12">  
     <div class="card col-lg-12">
