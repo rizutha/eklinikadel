@@ -13,7 +13,19 @@ return new class extends Migration
     {
         Schema::create('obat', function (Blueprint $table) {
             $table->id();
+            $table->date('tgl_input');
+            $table->varchar('nama_obat');
+            $table->foreignId('id_prod');
+            $table->foreignId('id_satuan');
+            $table->foreignId('id_batch');
+            $table->date('tgl_exp');
+            $table->integer('HNA');
+            $table->integer('PPN');
             $table->timestamps();
+
+            $table->foreign('id_prod')->references('id')->on('produsen')->onDelete('cascade');
+            $table->foreign('id_satuan')->references('id')->on('satuan')->onDelete('cascade');
+            $table->foreign('id_batch')->references('id')->on('batch_obat')->onDelete('cascade');
         });
     }
 
