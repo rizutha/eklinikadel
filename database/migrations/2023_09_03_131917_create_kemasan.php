@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('kemasan', function (Blueprint $table) {
             $table->id();
+            $table->varchar('jenis_bungkus');
+            $table->integer('harga_bungkus');
             $table->timestamps();
         });
     }
