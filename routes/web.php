@@ -28,7 +28,7 @@ Route::get('/default', function() {
 
 
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth','admin', 'verified'])->group(function () {
     // pasien 
     Route::get('/pasien', 'App\Http\Controllers\PasienController@index')->name('pasien.index');
     Route::get('/pasien/create', 'App\Http\Controllers\PasienController@create')->name('pasien.create');
@@ -46,7 +46,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 });
 
-Route::middleware(['auth', 'dokter'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/pasien', 'App\Http\Controllers\PasienController@index')->name('pasien.index');
+    Route::get('/apotek', [ApotekController::class, 'index']);
+    Route::get('/daftar', [DaftarController::class, 'index']);
     Route::get('/dokter', function() {
         return view('dokter');
     });
