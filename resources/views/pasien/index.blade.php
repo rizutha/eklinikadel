@@ -1,10 +1,11 @@
 @extends('templates.default')
 @section('title', 'Pasien')
-
+@if(Auth::user()->role == 'dokter')
+@else
 @push('page-action')
     <a href="{{ route ('pasien.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
 @endpush
-
+@endif
 @section('content')
     <div class="col-lg-12 ">
         <div class="card">
@@ -36,9 +37,11 @@
                             <td class="text-secondary">
                                 {{ $pasien->nomor_telp }}
                             </td>
+                            @if(Auth::user()->role == 'dokter')
+                            @else
                             <td>
                                 <div class="row">
-                                    <a href="{{ route('pasien.edit', $pasien->id) }}" class="col">Edit</a>
+                                    <a href="{{ route('pasien.edit', $pasien->id) }}" class="col btn btn-secondary">Edit</a>
                                     <form action="{{ route('pasien.destroy', $pasien->id) }}" method="post" class="col">
                                         @csrf
                                         @method('DELETE')
@@ -46,6 +49,7 @@
                                     </form>
                                 </div>
                             </td>
+                            @endif
                         </tr>
                         @endforeach
                     </tbody>

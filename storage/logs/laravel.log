@@ -15401,3 +15401,692 @@ Did you mean one of these?
 #65 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/opt/lampp/htdo...')
 #66 {main}
 "} 
+[2023-09-04 05:30:34] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (Connection: mysql, SQL: drop table if exists `kasir`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (Connection: mysql, SQL: drop table if exists `kasir`) at /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:795)
+[stacktrace]
+#0 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(569): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(110): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(439): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(309): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\Database\\Schema\\Builder->dropIfExists('kasir')
+#6 /opt/lampp/htdocs/eklinikadel/database/migrations/2023_08_17_034002_create_kasir.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->down()
+#8 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'down')
+#9 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(385): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'down')
+#11 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2023_08_17_0340...', Object(Closure))
+#13 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(385): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2023_08_17_0340...', Object(Closure))
+#14 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(304): Illuminate\\Database\\Migrations\\Migrator->runDown('/opt/lampp/htdo...', Object(stdClass), false)
+#15 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(246): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#16 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(59): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#17 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(58): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#20 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#25 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/Command.php(177): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /opt/lampp/htdocs/eklinikadel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails at /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:580)
+[stacktrace]
+#0 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(580): PDOStatement->execute()
+#1 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('drop table if e...', Array)
+#2 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#3 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(569): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#4 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(110): Illuminate\\Database\\Connection->statement('drop table if e...')
+#5 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(439): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(309): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\Database\\Schema\\Builder->dropIfExists('kasir')
+#8 /opt/lampp/htdocs/eklinikadel/database/migrations/2023_08_17_034002_create_kasir.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#9 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->down()
+#10 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'down')
+#11 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(385): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'down')
+#13 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2023_08_17_0340...', Object(Closure))
+#15 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(385): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2023_08_17_0340...', Object(Closure))
+#16 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(304): Illuminate\\Database\\Migrations\\Migrator->runDown('/opt/lampp/htdo...', Object(stdClass), false)
+#17 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(246): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#18 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(59): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#19 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(58): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#21 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#22 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#24 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#25 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#26 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#27 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#28 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Console/Command.php(177): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /opt/lampp/htdocs/eklinikadel/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /opt/lampp/htdocs/eklinikadel/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 {main}
+"} 
+[2023-09-04 05:48:15] local.ERROR: Route [dashboard] not defined. {"view":{"view":"/opt/lampp/htdocs/eklinikadel/resources/views/layouts/navigation.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-707656151 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#318</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-707656151\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","componentName":"<pre class=sf-dump id=sf-dump-1701230967 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"10 characters\">app-layout</span>\"
+</pre><script>Sfdump(\"sf-dump-1701230967\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-2004119121 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#1302</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-2004119121\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","resolve":"<pre class=sf-dump id=sf-dump-356087210 data-indent-pad=\"  \"><span class=sf-dump-note>App\\View\\Components\\AppLayout::resolve($data)</span> {<a class=sf-dump-ref>#1311</a><samp data-depth=1 class=sf-dump-expanded>
+  <span class=sf-dump-meta>file</span>: \"<span class=sf-dump-str title=\"/opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Component.php
+88 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/opt/lampp/htdocs/eklinikadel/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span>src/Illuminate/View/Component.php</span>\"
+  <span class=sf-dump-meta>line</span>: \"<span class=sf-dump-str title=\"9 characters\">91 to 106</span>\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-356087210\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-1694641650 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\HtmlString</span> {<a class=sf-dump-ref>#1307</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"\"
+    <span class=sf-dump-str title=\"10225 characters\">&lt;div class=&quot;py-12&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Profile Information<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Update your account&amp;#039;s profile information and email address.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;form id=&quot;send-verification&quot; method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/email/verification-notification&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/profile&quot; class=&quot;mt-6 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;patch&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;name&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Name<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; value=&quot;Dokter&quot; required=&quot;required&quot; autofocus=&quot;autofocus&quot; autocomplete=&quot;name&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;email&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Email<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; value=&quot;dokter@dokter.com&quot; required=&quot;required&quot; autocomplete=&quot;username&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;flex items-center gap-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Save<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Update Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Ensure your account is using a long, random password to stay secure.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/password&quot; class=&quot;mt-6 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;put&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;current_password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Current Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;current_password&quot; name=&quot;current_password&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    New Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;password_confirmation&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Confirm Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;password_confirmation&quot; name=&quot;password_confirmation&quot; type=&quot;password&quot; autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;flex items-center gap-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Save<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                    &lt;section class=&quot;space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150&quot; x-data=&quot;&quot; x-on:click.prevent=&quot;$dispatch(&#039;open-modal&#039;, &#039;confirm-user-deletion&#039;)&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-data=&quot;{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        show: false,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        focusables() {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            // All focusable element types...<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            let selector = &#039;a, button, input:not([type=\\&#039;hidden\\&#039;]), textarea, select, details, [tabindex]:not([tabindex=\\&#039;-1\\&#039;])&#039;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            return [...$el.querySelectorAll(selector)]<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                // All non-disabled elements...<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                .filter(el =&gt; ! el.hasAttribute(&#039;disabled&#039;))<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        firstFocusable() { return this.focusables()[0] },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        lastFocusable() { return this.focusables().slice(-1)[0] },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    }&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-init=&quot;$watch(&#039;show&#039;, value =&gt; {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        if (value) {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            document.body.classList.add(&#039;overflow-y-hidden&#039;);<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            setTimeout(() =&amp;gt; firstFocusable().focus(), 100)<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        } else {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            document.body.classList.remove(&#039;overflow-y-hidden&#039;);<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        }<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    })&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-on:open-modal.window=&quot;$event.detail == &#039;confirm-user-deletion&#039; ? show = true : null&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-on:close.stop=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.escape.window=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.tab.prevent=&quot;$event.shiftKey || nextFocusable().focus()&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.shift.tab.prevent=&quot;prevFocusable().focus()&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    class=&quot;fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    style=&quot;display: none;&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        class=&quot;fixed inset-0 transform transition-all&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-on:click=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter=&quot;ease-out duration-300&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-start=&quot;opacity-0&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-end=&quot;opacity-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave=&quot;ease-in duration-200&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-start=&quot;opacity-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-end=&quot;opacity-0&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;absolute inset-0 bg-gray-500 opacity-75&quot;&gt;&lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        class=&quot;mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter=&quot;ease-out duration-300&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-start=&quot;opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-end=&quot;opacity-100 translate-y-0 sm:scale-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave=&quot;ease-in duration-200&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-start=&quot;opacity-100 translate-y-0 sm:scale-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-end=&quot;opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/profile&quot; class=&quot;p-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;            &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;delete&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                Are you sure you want to delete your account?<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;mt-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;label class=&quot;block font-medium text-sm text-gray-700 sr-only&quot; for=&quot;password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-3/4&quot; id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;mt-6 flex justify-end&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;button type=&quot;button&quot; class=&quot;inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150&quot; x-on:click=&quot;$dispatch(&#039;close&#039;)&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Cancel<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150 ml-3&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1694641650\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","header":"<pre class=sf-dump id=sf-dump-2090831765 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentSlot</span> {<a class=sf-dump-ref>#1309</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#1308</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+    <span class=sf-dump-str title=\"96 characters\">&lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"96 characters\">            Profile<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"96 characters\">        &lt;/h2&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-2090831765\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-1818582388 data-indent-pad=\"  \"><span class=sf-dump-note>array:2</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#1307</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"\"
+      <span class=sf-dump-str title=\"10225 characters\">&lt;div class=&quot;py-12&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Profile Information<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Update your account&amp;#039;s profile information and email address.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;form id=&quot;send-verification&quot; method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/email/verification-notification&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/profile&quot; class=&quot;mt-6 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;patch&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;name&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Name<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; value=&quot;Dokter&quot; required=&quot;required&quot; autofocus=&quot;autofocus&quot; autocomplete=&quot;name&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;email&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Email<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; value=&quot;dokter@dokter.com&quot; required=&quot;required&quot; autocomplete=&quot;username&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;flex items-center gap-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Save<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Update Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Ensure your account is using a long, random password to stay secure.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/password&quot; class=&quot;mt-6 space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;put&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;current_password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Current Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;current_password&quot; name=&quot;current_password&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    New Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;label class=&quot;block font-medium text-sm text-gray-700&quot; for=&quot;password_confirmation&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Confirm Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full&quot; id=&quot;password_confirmation&quot; name=&quot;password_confirmation&quot; type=&quot;password&quot; autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;flex items-center gap-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Save<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;p-4 sm:p-8 bg-white shadow sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;div class=&quot;max-w-xl&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                    &lt;section class=&quot;space-y-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/header&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150&quot; x-data=&quot;&quot; x-on:click.prevent=&quot;$dispatch(&#039;open-modal&#039;, &#039;confirm-user-deletion&#039;)&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-data=&quot;{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        show: false,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        focusables() {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            // All focusable element types...<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            let selector = &#039;a, button, input:not([type=\\&#039;hidden\\&#039;]), textarea, select, details, [tabindex]:not([tabindex=\\&#039;-1\\&#039;])&#039;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            return [...$el.querySelectorAll(selector)]<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                // All non-disabled elements...<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                .filter(el =&gt; ! el.hasAttribute(&#039;disabled&#039;))<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        firstFocusable() { return this.focusables()[0] },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        lastFocusable() { return this.focusables().slice(-1)[0] },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    }&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-init=&quot;$watch(&#039;show&#039;, value =&gt; {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        if (value) {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            document.body.classList.add(&#039;overflow-y-hidden&#039;);<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            setTimeout(() =&amp;gt; firstFocusable().focus(), 100)<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        } else {<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            document.body.classList.remove(&#039;overflow-y-hidden&#039;);<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        }<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    })&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-on:open-modal.window=&quot;$event.detail == &#039;confirm-user-deletion&#039; ? show = true : null&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-on:close.stop=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.escape.window=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.tab.prevent=&quot;$event.shiftKey || nextFocusable().focus()&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-on:keydown.shift.tab.prevent=&quot;prevFocusable().focus()&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    class=&quot;fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    style=&quot;display: none;&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        class=&quot;fixed inset-0 transform transition-all&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-on:click=&quot;show = false&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter=&quot;ease-out duration-300&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-start=&quot;opacity-0&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-end=&quot;opacity-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave=&quot;ease-in duration-200&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-start=&quot;opacity-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-end=&quot;opacity-0&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;div class=&quot;absolute inset-0 bg-gray-500 opacity-75&quot;&gt;&lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;div<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-show=&quot;show&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        class=&quot;mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter=&quot;ease-out duration-300&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-start=&quot;opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:enter-end=&quot;opacity-100 translate-y-0 sm:scale-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave=&quot;ease-in duration-200&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-start=&quot;opacity-100 translate-y-0 sm:scale-100&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        x-transition:leave-end=&quot;opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;form method=&quot;post&quot; action=&quot;http://127.0.0.1:8000/profile&quot; class=&quot;p-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zTdei6AB9bELqHP77yRns22GwD9QP0NwtdTlGArf&quot;&gt;            &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;delete&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;h2 class=&quot;text-lg font-medium text-gray-900&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                Are you sure you want to delete your account?<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/h2&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;p class=&quot;mt-1 text-sm text-gray-600&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/p&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;mt-6&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;label class=&quot;block font-medium text-sm text-gray-700 sr-only&quot; for=&quot;password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;input  class=&quot;border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-3/4&quot; id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;div class=&quot;mt-6 flex justify-end&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;button type=&quot;button&quot; class=&quot;inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150&quot; x-on:click=&quot;$dispatch(&#039;close&#039;)&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Cancel<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150 ml-3&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    Delete Account<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">&lt;/section&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">            &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"10225 characters\">    &lt;/div&gt;</span>
+      \"\"\"
+  </samp>}
+  \"<span class=sf-dump-key>header</span>\" => <span class=sf-dump-note title=\"Illuminate\\View\\ComponentSlot
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentSlot</span> {<a class=sf-dump-ref>#1309</a><samp data-depth=2 class=sf-dump-compact>
+    +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#1308</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+      <span class=sf-dump-str title=\"96 characters\">&lt;h2 class=&quot;font-semibold text-xl text-gray-800 leading-tight&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"96 characters\">            Profile<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"96 characters\">        &lt;/h2&gt;</span>
+      \"\"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1818582388\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":2,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [dashboard] not defined. at /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('dashboard', Array, true)
+#1 /opt/lampp/htdocs/eklinikadel/resources/views/layouts/navigation.blade.php(8): route('dashboard')
+#2 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#6 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#7 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#8 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#9 /opt/lampp/htdocs/eklinikadel/resources/views/layouts/app.blade.php(19): Illuminate\\View\\View->render()
+#10 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#11 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#13 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#14 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#15 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#16 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#17 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(100): Illuminate\\View\\View->render()
+#18 /opt/lampp/htdocs/eklinikadel/resources/views/profile/edit.blade.php(24): Illuminate\\View\\Factory->renderComponent()
+#19 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#20 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#21 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#22 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#23 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#24 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#25 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#26 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#27 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#28 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#29 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#30 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#31 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#42 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#50 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#51 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#52 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#53 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#68 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#69 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#70 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#71 /opt/lampp/htdocs/eklinikadel/public/index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#72 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/opt/lampp/htdo...')
+#73 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [dashboard] not defined. at /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('dashboard', Array, true)
+#1 /opt/lampp/htdocs/eklinikadel/storage/framework/views/86c2f63074f1d006c508b5738f9eee55.php(8): route('dashboard')
+#2 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#6 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#7 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#8 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#9 /opt/lampp/htdocs/eklinikadel/storage/framework/views/9639ab5acf6a6125245e70e8473dceaf.php(19): Illuminate\\View\\View->render()
+#10 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#11 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#13 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#14 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#15 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#16 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#17 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(100): Illuminate\\View\\View->render()
+#18 /opt/lampp/htdocs/eklinikadel/storage/framework/views/2ab5db11c776315b03187d80775ceb35.php(38): Illuminate\\View\\Factory->renderComponent()
+#19 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/opt/lampp/htdo...')
+#20 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#21 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/opt/lampp/htdo...', Array)
+#22 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#23 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#24 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#25 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#26 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#27 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#28 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#29 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#30 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#31 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#42 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#50 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#51 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#52 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#53 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#68 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#69 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#70 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#71 /opt/lampp/htdocs/eklinikadel/public/index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#72 /opt/lampp/htdocs/eklinikadel/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('/opt/lampp/htdo...')
+#73 {main}
+"} 
