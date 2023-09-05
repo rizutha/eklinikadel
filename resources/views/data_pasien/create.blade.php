@@ -32,10 +32,6 @@
                     <input type="text" name="kabupaten" class="form-control" placeholder="Masukkan Kabupaten">
                 </div>
                 <div class="mb-3">
-                    <label for="tanggal_terakhir_periksa" class="form-label">Tanggal Terakhir Periksa</label>
-                    <input type="date" name="tanggal_terakhir_periksa" class="form-control">
-                </div>
-                <div class="mb-3">
                     <label for="status" class="form-label">Status</label>
                     <input type="text" name="status" class="form-control" placeholder="Masukkan Status">
                 </div>

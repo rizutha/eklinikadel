@@ -37,7 +37,6 @@ class DataPasienController extends Controller
             'alamat' => 'required',
             'kecamatan' => 'required',
             'kabupaten' => 'required',
-            'tanggal_terakhir_periksa' => 'required|date',
             'status' => 'required',
         ]);
 
@@ -50,6 +49,7 @@ class DataPasienController extends Controller
 
         // Simpan data
         DataPasiens::create([
+            'id' => '',
             'no_rm' => $nomor_rm,
             'Nama_lengkap' => $request->Nama_lengkap,
             'nik' => $request->nik,
@@ -58,7 +58,6 @@ class DataPasienController extends Controller
             'alamat' => $request->alamat,
             'kecamatan' => $request->kecamatan,
             'kabupaten' => $request->kabupaten,
-            'tanggal_terakhir_periksa' => $request->tanggal_terakhir_periksa,
             'status' => $request->status,
         ]);
 
@@ -95,7 +94,6 @@ class DataPasienController extends Controller
             'alamat' => 'required',
             'kecamatan' => 'required',
             'kabupaten' => 'required',
-            'tanggal_terakhir_periksa' => 'required|date',
             'status' => 'required',
         ]);
     
@@ -110,7 +108,6 @@ class DataPasienController extends Controller
             'alamat' => $request->alamat,
             'kecamatan' => $request->kecamatan,
             'kabupaten' => $request->kabupaten,
-            'tanggal_terakhir_periksa' => $request->tanggal_terakhir_periksa,
             'status' => $request->status,
         ]);
     

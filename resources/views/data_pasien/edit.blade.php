@@ -37,10 +37,6 @@
                     <input type="text" name="kabupaten" class="form-control" value="{{ $dataPasien->kabupaten }}">
                 </div>
                 <div class="mb-3">
-                    <label for="tanggal_terakhir_periksa" class="form-label">Tanggal Terakhir Periksa</label>
-                    <input type="date" name="tanggal_terakhir_periksa" class="form-control" value="{{ $dataPasien->tanggal_terakhir_periksa }}">
-                </div>
-                <div class="mb-3">
                     <label for="status" class="form-label">Status</label>
                     <input type="text" name="status" class="form-control" value="{{ $dataPasien->status }}">
                 </div>

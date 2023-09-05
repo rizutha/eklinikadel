@@ -22,7 +22,6 @@
                             <th>Alamat</th>
                             <th>Kecamatan</th>
                             <th>Kabupaten</th>
-                            <th>Tanggal Terakhir Periksa</th>
                             <th>Status</th>
                             <th>Dibuat</th>
                             <th class="w-1"></th>
@@ -53,8 +52,6 @@
                                 {{ $pasien->kecamatan }}
                             </td> <td class="text-secondary">
                                 {{ $pasien->kabupaten }}
-                            </td> <td class="text-secondary">
-                                {{ $pasien->tanggal_terakhir_periksa }}
                             </td> <td class="text-secondary">
                                 {{ $pasien->status }}
                             </td> <td class="text-secondary">

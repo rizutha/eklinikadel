@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('data_pasiens', function (Blueprint $table) {
-            $table->integer('id')->unique();
+            $table->increments('id')->unique();
             $table->string('no_rm', 255)->primary();
             $table->string('Nama_lengkap');
             $table->string('nik');
@@ -21,7 +21,6 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('kecamatan');
             $table->string('kabupaten');
-            $table->date('tanggal_terakhir_periksa');
             $table->string('status');
             $table->timestamps();
         });
