@@ -40,8 +40,6 @@
                     aria-label="Open user menu">
                     <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div>{{  Auth::user()->name ?? '' }}</div>
-                        <div class="small text-muted mt-1">{{ Auth::user()->email ?? '' }}</div>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -106,7 +104,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="/pasien">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -128,31 +126,28 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/data_pasien">
+                    @if(Auth::user()->role == 'dokter')
+                    <li class="nav-item d-none">
+                        <a class="nav-link" href="/kasir">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-emergency-bed" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M16 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                    <path d="M8 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                    <path d="M4 8l2.1 2.8a3 3 0 0 0 2.4 1.2h11.5"></path>
-                                    <path d="M10 6h4"></path>
-                                    <path d="M12 4v4"></path>
-                                    <path d="M12 12v2l-2.5 2.5"></path>
-                                    <path d="M14.5 16.5l-2.5 -2.5"></path>
+                                    <path
+                                        d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z">
+                                    </path>
+                                    <path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                    <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"></path>
                                 </svg>
                             </span>
                             <span class="nav-link-title">
-                                Data Pasien
+                                Kasir
                             </span>
                         </a>
                     </li>
-                    @if(Auth::user()->role == 'dokter')
-                       
-                    @else
+                    @else()
                     <li class="nav-item">
                         <a class="nav-link" href="/kasir">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -172,8 +167,27 @@
                                 Kasir
                             </span>
                         </a>
-                    </li> 
-                    @endif
+                    </li>
+                    <li class="nav-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="nav-link" style="border: none; background: none; cursor: pointer;">
+                                <span class="nav-link-title">
+                                    Logout
+                                </span>
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>                                
+                            </button>
+                        </form>
+                    </li>                    
                 </ul>
             </div>
         </div>
