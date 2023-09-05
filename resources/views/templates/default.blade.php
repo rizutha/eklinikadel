@@ -27,10 +27,10 @@
               <div class="col">
                 <!-- Page pre-title -->
                 <div class="page-pretitle">
-                  {{ $preTitle ?? 'Data' }}
+                  {{ $preTitle ?? 'Selamat Datang di' }}
                 </div>
                 <h2 class="page-title mb-3">
-                  {{ $title ?? 'Judul' }}
+                  {{ $title ?? 'Dashboard e-Klinik Adella' }}
                 </h2>
               </div>
               <div class="col-auto ms-auto d-print-none">
