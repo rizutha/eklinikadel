@@ -1,11 +1,11 @@
 @extends('templates.default')
-@section('title', 'Create Pasien')
+@section('title', 'Create Data Pasien')
 
 @section('content')
 <div class="row col-lg-12">  
     <div class="card col-lg-12">
         <div class="card-body">
-            <form action="{{ route('pasien.create') }}" class="" method=post>
+            <form action="/data_pasien/store" class="" method=post>
             @csrf
                 <div class="mb-3">
                     <label class="form-label">Nama</label>
