@@ -7,50 +7,46 @@
                 <table class="table table-vcenter card-table ">
                     <thead>
                         <tr>
-                            <th>No.</th>
-                            <th>No. Reg</th>
-                            <th>No. Rekam Medis</th>
-                            <th>Aksi</th>
+                            <th>No. Rm</th>
+                            <th>Nama lengkap</th>
+                            <th>Nik</th>
+                            <th>ygl lahir</th>
+                            <th>umur</th>
+                            <th>alamat</th>
+                            <th>kabupaten</th>
+                            <th>tanggal periksa</th>
+                            <th>status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach($pendaftarans as $pendaftaran)
-                        <tr>
+                        
                             <td class="text-secondary">
-                                {{ $loop->iteration }}
-                            </td>
-                            <td class="text-secondary">
-                                {{ $pendaftaran->no_reg }}
+                                {{ $detail->dataPasien->no_rm }}
                             </td>
                             <td class="text-secondary">
-                                {{ $pendaftaran->no_rm }}
-                            </td> --}}
-                            <td class="text-secondary">
-                                {{ $pendaftaran->dataPasien->Nama_lengkap }}
-                            </td>
-                            {{-- <td class="text-secondary">
-                                {{ $pendaftaran->dataPasien->Nama_lengkap }}
-                            </td>
-                             <td class="text-secondary">
-                                {{ $pendaftaran->dataPasien->Nama_lengkap }}
+                                {{ $detail->dataPasien->Nama_lengkap }}
                             </td>
                             <td class="text-secondary">
-                                {{ $pendaftaran->dataPasien->Nama_lengkap }}
+                                {{ $detail->dataPasien->nik }}
                             </td>
-                           --}}
-                            @if(Auth::user()->role == 'dokter')
-                            @else
-                            <td>
-                                <a href="/pendaftaran/{{$pendaftaran->no_reg}}/edit" class="btn btn-primary">Edit</a>
-                                <form action="/pendaftaran/{{$pendaftaran->no_reg}}" method="POST" style="display: inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->tgl_lahir }}
                             </td>
-                            @endif
-                        </tr>
-                        @endforeach
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->umur }}
+                            </td>
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->alamat }}
+                            </td>
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->kabupaten }}
+                            </td>
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->tanggal_terakhir_periksa }}
+                            </td>
+                            <td class="text-secondary">
+                                {{ $detail->dataPasien->status }}
+                            </td>
                     </tbody>
                 </table>
             </div>

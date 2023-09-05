@@ -54,7 +54,7 @@ Route::middleware(['auth','admin', 'verified'])->group(function () {
     Route::get('/pendaftaran/create', [PendaftaranController::class, 'create']);
     Route::post('/pendaftaran/store', [PendaftaranController::class, 'store']);
     Route::get('/pendaftaran/{no_rm}/edit', [PendaftaranController::class, 'edit']);
-    Route::get('/pendaftaran/{no_rm}/detail', [PendaftaranController::class, 'detail']);
+    Route::get('/pendaftaran/{no_reg}/detail', [PendaftaranController::class, 'detail']);
     Route::put('/pendaftaran/{no_rm}', [PendaftaranController::class, 'update']);
     Route::delete('/pendaftaran/{no_rm}', [PendaftaranController::class, 'destroy']);
     
