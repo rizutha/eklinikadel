@@ -16,6 +16,11 @@ class PendaftaranController extends Controller
         return view('pendaftaran.index', compact('pendaftarans'));
     }
 
+    public function detail()
+    {
+        $pendaftarans = Pendaftarans::all();
+        return view('pendaftaran.detail', compact('pendaftarans'));
+    }
     /**
      * Show the form for creating a new resource.
      */
