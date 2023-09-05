@@ -12,6 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('data_pasiens', function (Blueprint $table) {
+            $table->integer('id')->unique();
             $table->string('no_rm', 255)->primary();
             $table->string('Nama_lengkap');
             $table->string('nik');

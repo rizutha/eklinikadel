@@ -21,6 +21,7 @@ class PendaftaranController extends Controller
        $details = Pendaftarans::find($no_reg);
         return view('pendaftaran.detail', [
             'detail' =>$details,
+            'preTitle' => 'Edit | '.$details->dataPasien->Nama_lengkap,
             'title' => 'Details'
         ]);
     }
