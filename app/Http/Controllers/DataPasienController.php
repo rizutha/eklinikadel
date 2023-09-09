@@ -13,8 +13,12 @@ class DataPasienController extends Controller
      */
     public function index()
     {
-        $dataPasien = DataPasiens::all();
-        return view('data_pasien.index', compact('dataPasien'));
+        $dataPasien = DataPasiens::orderBy('id', 'desc')->get();
+        return view('data_pasien.index',[
+            'title' => 'Pasien',
+            'preTitle' => 'Data Pasien',
+            'dataPasien' => $dataPasien
+        ]);
     }
 
     /**
@@ -22,7 +26,10 @@ class DataPasienController extends Controller
      */
     public function create()
     {
-        return view('data_pasien.create');
+        return view('data_pasien.create', [
+            'title' => 'Pasien',
+            'preTitle' => 'Create | Data Pasien',
+        ]);
     }
 
     /**
@@ -31,6 +38,7 @@ class DataPasienController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'id' => '',
             'Nama_lengkap' => 'required',
             'nik' => 'required|numeric',
             'tgl_lahir' => 'required|date',
@@ -40,16 +48,15 @@ class DataPasienController extends Controller
             'status' => 'required',
         ]);
 
-        $year = date('Y');
-        $nama = str_replace(' ', '_', $request->Nama_lengkap);
-        $nomor_rm = mt_rand(1000, 9999) . $year . $nama;
-
+        // $year = date('Y');
+        $nomor_rm = mt_rand(1000, 9999) . date('ymd');
         $tgl_lahir = Carbon::parse($request->tgl_lahir);
         $umur = $tgl_lahir->age;
+        $random = mt_rand(1000, 9999). date('ym');
 
         // Simpan data
         DataPasiens::create([
-            'id' => '',
+            'id' => $random,
             'no_rm' => $nomor_rm,
             'Nama_lengkap' => $request->Nama_lengkap,
             'nik' => $request->nik,
@@ -79,7 +86,11 @@ class DataPasienController extends Controller
     {
         $dataPasien = DataPasiens::findOrFail($id);
 
-        return view('data_pasien.edit', compact('dataPasien'));
+        return view('data_pasien.edit',[
+            'title' => 'Pasien',
+            'preTitle' => 'Edit | '. $dataPasien->Nama_lengkap,
+            'dataPasien' => $dataPasien
+        ]);
     }
 
     /**

@@ -11,8 +11,12 @@ class PoliController extends Controller
      */
     public function index()
     {
-        $poli = PoliModel::all();
-        return view('poli.index', compact('poli'));
+        $poli = PoliModel::orderBy('id_poli', 'desc')->get();
+        return view('poli.index',[
+            'title' => 'Poli',
+            'preTitle' => 'Data Poli',
+            'poli' => $poli
+        ]);
     }
 
     /**
@@ -20,7 +24,10 @@ class PoliController extends Controller
      */
     public function create()
     {
-        return view('poli.create');
+        return view('poli.create', [
+            'title' => 'Poli',
+            'preTitle' => 'Create | Data Poli',
+        ]);
     }
 
     /**
@@ -48,7 +55,10 @@ class PoliController extends Controller
     {
         $poli = poliModel::findOrFail($id_poli);
 
-        return view('poli.edit', compact('poli'));
+        return view('poli.edit', [
+            'title' => 'Poli',
+            'preTitle' => 'Edit | '.$poli->nm_poli,
+        ]);
     }
 
     /**
