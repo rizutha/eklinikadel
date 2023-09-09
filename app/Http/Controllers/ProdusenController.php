@@ -11,8 +11,12 @@ class ProdusenController extends Controller
      */
     public function index()
     {
-        $produsen = ProdusenModel::all();
-        return view('produsen.index', compact('produsen'));
+        $produsen = ProdusenModel::orderBy('id_prod', 'desc')->get();
+        return view('produsen.index', [
+            'title' => 'Produsen',
+            'preTitle' => 'Data Produsen',
+            'produsen' => $produsen
+        ]);
     }
 
     /**
@@ -20,7 +24,10 @@ class ProdusenController extends Controller
      */
     public function create()
     {
-        return view('produsen.create');
+        return view('produsen.create', [
+            'title' => 'Produsen',
+            'preTitle' => 'Create | Data Produsen',
+        ]);
     }
 
     /**
@@ -47,7 +54,11 @@ class ProdusenController extends Controller
     {
         $produsen = ProdusenModel::findOrFail($id_prod);
 
-        return view('produsen.edit', compact('produsen'));
+        return view('produsen.edit', [
+            'title' => 'Produsen',
+            'preTitle' => 'Edit | '.$produsen->nm_prod,
+            'produsen' => $produsen
+        ]);
     }
 
     /**

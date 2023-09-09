@@ -12,25 +12,20 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        $pendaftarans = Pendaftarans::all();
-        return view('pendaftaran.index', compact('pendaftarans'));
-    }
-
-    public function detail($no_reg)
-    {
-       $details = Pendaftarans::find($no_reg);
-        return view('pendaftaran.detail', [
-            'detail' =>$details,
-            'preTitle' => 'Edit | '.$details->dataPasien->Nama_lengkap,
-            'title' => 'Details'
+        $pendaftarans = Pendaftarans::orderBy('no_reg', 'desc')->get();
+        return view('pendaftaran.index', [
+            'title' => 'Pendaftaran',
+            'preTitle' => 'Data Pendaftaran',
+            'pendaftarans' => $pendaftarans
         ]);
     }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        $dataPasiens = DataPasiens::all();
+        $dataPasiens = DataPasiens::orderBy('id', 'desc')->get();
         return view('pendaftaran.create', compact('dataPasiens'));
     }
 
@@ -53,9 +48,14 @@ class PendaftaranController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $no_reg)
     {
-        //
+        $details = Pendaftarans::find($no_reg);
+        return view('pendaftaran.detail', [
+            'detail' =>$details,
+            'preTitle' => 'Show | '.$details->dataPasien->Nama_lengkap,
+            'title' => 'Pendaftaran'
+        ]);
     }
 
     /**

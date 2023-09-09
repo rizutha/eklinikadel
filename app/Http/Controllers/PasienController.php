@@ -58,7 +58,7 @@ class PasienController extends Controller
         return view('pasien.edit', [
             'pasien' => $pasien,
             'title' => 'Data Pasien',
-            'preTitle' => 'Edit > '. $pasien->no_rm,
+            'preTitle' => 'Edit | '. $pasien->no_rm,
         ]);
     }
     

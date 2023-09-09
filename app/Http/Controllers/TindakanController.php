@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\TidakanModel;
+use App\Models\TindakanModel;
 use Illuminate\Http\Request;
 
 class TindakanController extends Controller
@@ -11,8 +11,12 @@ class TindakanController extends Controller
      */
     public function index()
     {
-        $tindakan = TidakanModel::all();
-        return view('tindakan.index', compact('tindakan'));
+        $tindakan = TindakanModel::all();
+        return view('tindakan.index', [
+            'title' => 'Tindakan',
+            'preTitle' => 'Data Tindakan',
+            'tindakan' => $tindakan
+        ]);
     }
 
     /**
@@ -20,7 +24,10 @@ class TindakanController extends Controller
      */
     public function create()
     {
-        return view('tindakan.create');
+        return view('tindakan.create', [
+            'title' => 'Tindakan',
+            'preTitle' => 'Create | Data Tindakan',
+        ]);
     }
 
     /**
@@ -35,7 +42,7 @@ class TindakanController extends Controller
 
 
         // Simpan data
-        TidakanModel::create([
+        TindakanModel::create([
             'nm_tindakan' => $request->nm_tindakan,
             'harga' => $request->harga,
         ]);
@@ -50,7 +57,11 @@ class TindakanController extends Controller
     {
         $tindakan = TindakanModel::findOrFail($id_tindakan);
 
-        return view('tindakan.edit', compact('tindakan'));
+        return view('tindakan.edit', [
+            'title' => 'Tindakan',
+            'preTitle' => 'Edit | '.$tindakan->nm_tindakan,
+            'tindakan' => $tindakan
+        ]);
     }
 
     /**
@@ -71,7 +82,7 @@ class TindakanController extends Controller
             'harga' => 'required',
         ]);
     
-        $tindakan = TidakanModel::findOrFail($id);
+        $tindakan = TindakanModel::findOrFail($id);
         $tindakan->update([
             'nm_tindakan' => $request->nm_tindakan,
             'harga' => $request->harga,
@@ -85,7 +96,7 @@ class TindakanController extends Controller
      */
     public function destroy(string $id)
     {
-        $tindakan = TidakanModel::findOrFail($id);
+        $tindakan = TindakanModel::findOrFail($id);
         $tindakan->delete();
 
         return redirect('/tindakan');

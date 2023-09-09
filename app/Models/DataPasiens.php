@@ -11,6 +11,7 @@ class DataPasiens extends Model
     protected $table = 'data_pasiens';
 
     protected $fillable = [
+        'id',
         'no_rm',
         'Nama_lengkap',
         'nik',
