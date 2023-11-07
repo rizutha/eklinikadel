@@ -9,7 +9,7 @@ class DataPasiens extends Model
 {
     use HasFactory;
     protected $table = 'data_pasiens';
-
+    protected $primaryKey = 'id';
     protected $fillable = [
         'id',
         'no_rm',
