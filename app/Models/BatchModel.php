@@ -9,4 +9,5 @@ class BatchModel extends Model
 {
     use HasFactory;
     protected $table = 'batch_obats';
+    protected $primaryKey = 'id_batch';
 }

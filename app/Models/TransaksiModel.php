@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Pendaftaran;
+use App\Models\Pendaftarans;
 use App\Models\KasirModel;
 
 class TransaksiModel extends Model
@@ -15,7 +15,7 @@ class TransaksiModel extends Model
 
     public function pendaftaran()
     {
-        return $this->belongsTo(Pendaftaran::class, 'no_reg', 'no_reg');
+        return $this->belongsTo(Pendaftarans::class, 'no_reg', 'no_reg');
     }
 
     public function kasir()

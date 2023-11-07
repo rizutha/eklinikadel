@@ -9,8 +9,8 @@ class Pendaftarans extends Model
 {
     use HasFactory;
     protected $fillable = ['no_rm'];
-    protected $table = 'pendaftarans'; 
-    protected $primaryKey = 'no_reg'; 
+    protected $table = 'pendaftarans';
+    protected $primaryKey = 'no_reg';
     public function dataPasien()
     {
         return $this->belongsTo(DataPasiens::class, 'no_rm', 'no_rm');

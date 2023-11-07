@@ -9,4 +9,5 @@ class KasirModel extends Model
 {
     use HasFactory;
     protected $table = 'kasirs';
+    protected $primaryKey = 'id_kasir';
 }

@@ -9,4 +9,5 @@ class PoliModel extends Model
 {
     use HasFactory;
     protected $table = 'polis';
+    protected $primaryKey = 'id_poli';
 }

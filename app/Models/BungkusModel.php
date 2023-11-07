@@ -9,4 +9,5 @@ class BungkusModel extends Model
 {
     use HasFactory;
     protected $table = 'bungkus';
+    protected $primaryKey = 'id_bungkus';
 }
