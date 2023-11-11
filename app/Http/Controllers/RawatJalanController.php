@@ -44,21 +44,6 @@ class RawatJalanController extends Controller
      */
     public function store(Request $request)
     {
-        $validateRawatJalan = $request->validate([
-            'no_reg' => 'required|integer',
-            'id_tindakan' => 'required|integer',
-            'id_poli' => 'required|integer',
-            'qty' => 'required|integer',
-            'subtotal' => 'required|numeric',
-        ]);
-
-        $rawatJalan = new RawatJalan();
-        $rawatJalan->no_reg = $validateRawatJalan->no_reg;
-        $rawatJalan->id_tindakan = $validateRawatJalan->id_tindakan;
-        $rawatJalan->id_poli = $validateRawatJalan->id_poli;
-        $rawatJalan->qty = $validateRawatJalan->qty;
-        $rawatJalan->subtotal = $validateRawatJalan->subtotal;
-        $rawatJalan->save();
 
         return redirect('/rawat_jalan');
     }
@@ -100,21 +85,7 @@ class RawatJalanController extends Controller
      */
     public function update(Request $request, string $id_rawat_jalan)
     {
-        $validateRawatJalan = $request->validate([
-            'no_reg' => 'required|integer',
-            'id_tindakan' => 'required|integer',
-            'id_poli' => 'required|integer',
-            'qty' => 'required|integer',
-            'subtotal' => 'required|numeric',
-        ]);
-    
-        $rawatJalan = RawatJalan::findOrFail($id_rawat_jalan);
-        $rawatJalan->no_reg = $validateRawatJalan->no_reg;
-        $rawatJalan->id_tindakan = $validateRawatJalan->id_tindakan;
-        $rawatJalan->id_poli = $validateRawatJalan->id_poli;
-        $rawatJalan->qty = $validateRawatJalan->qty;
-        $rawatJalan->subtotal = $validateRawatJalan->subtotal;
-        $rawatJalan->save();
+
         return redirect('/rawat_jalan');
     }
 
